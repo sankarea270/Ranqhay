@@ -1,0 +1,27 @@
+# ============================================
+# Ranqhay - archivos que Git NO debe subir
+# ============================================
+
+# Dependencias: pesan cientos de MB y se reinstalan con "npm install"
+node_modules/
+
+# Variables de entorno: tienen claves reales
+# (DATABASE_URL de Supabase, JWT_SECRET). NUNCA se suben.
+.env
+.env.*
+# ...excepto las plantillas sin valores, que si se suben
+!.env.example
+
+# Compilados: se generan con "npm run build"
+dist/
+build/
+
+# Reportes de cobertura de pruebas
+coverage/
+
+# Logs
+*.log
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
